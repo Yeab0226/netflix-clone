@@ -1,4 +1,5 @@
 /* T-07/T-08: Build the Netflix header here. */
+
 import React, { useEffect } from "react";
 import Styles from "./Header.module.css";
 
@@ -76,14 +77,35 @@ function Header() {
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className={Styles.searchButton}
             >
-              ..............work here...................
+              <Search size={20} />
             </button>
-            ..............work here...................
+
+            {isSearchOpen && (
+              <input
+                type="text"
+                placeholder="movie title"
+                className={Styles.searchInput}
+              />
+            )}
           </div>
-          ..............work here...................
+          <button className={Styles.iconButton}>
+            <Bell size={20} />
+            <span className={Styles.notificationBadge}>4</span>
+          </button>
+
           {/* profile icon  */}
+
           <div className={Styles.profileContainer}>
-            ..............work here...................
+            <button
+              onClick={() => setIsProfileOpen(!isProfileOpen)}
+              className={Styles.profileButton}
+            >
+              <div className={Styles.profileAvatar}>
+                <User size={20} />
+              </div>
+              <ChevronDown size={20} />
+            </button>
+
             {isProfileOpen && (
               <div className={Styles.profileMenu}>
                 <Link className={Styles.profileMenuItem}>Account</Link>
