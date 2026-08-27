@@ -11,6 +11,7 @@ import { IoIosArrowDropdownCircle } from "react-icons/io";
 const IMAGE_BASE =
   "https://image.tmdb.org/t/p/w500";
 
+// moviecard function
 function MovieCard({ movie }) {
   let genres = [
     "Adventure",
