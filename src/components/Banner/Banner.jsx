@@ -46,9 +46,41 @@ function Banner() {
     
   /* T-10/T-11: Build the hero banner here. */
     
-   <div>
-    <h1>Banner Component</h1>
-   </div>
+    <div
+      className={styles.banner}
+      style={{
+        backgroundSize: "cover",
+        backgroundImage: `url("${BANNER_BASE}${bannerImage.backdrop_path}")`,
+      }}
+    >
+      <div className={styles.contents}>
+        {/* logo  */}
+        <img
+          className={styles.logoImg}
+          src={NetflixBannerLogo}
+          alt="Netflix Logo"
+        />
+        {/* title  */}
+        <h1 className={styles.title}>{bannerImage?.original_name}</h1>
+        {/* description  */}
+        <h1 className={styles.description}>
+          {truncate(bannerImage?.overview, 120)}
+        </h1>
+        {/* buttons  */}
+        <div className={styles.buttonContainer}>
+          <button className={styles.button}>
+            <Play size={30} />
+            Play
+          </button>
+          <button className={styles.button}>
+            <Info size={30} />
+            My List
+          </button>
+        </div>
+      </div>
+      {/* div for the banner fading effect  */}
+      <div className={styles.fadeButtom}></div>
+    </div>
   );
 }
 
