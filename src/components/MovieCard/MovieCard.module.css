@@ -1,4 +1,691 @@
 /* T-14: Movie card styles */
+/* =========================================
+   MOVIE CARD WRAPPER
+========================================= */
+
 .cardWrapper {
-  /* Add movie card styles here. */
+  position: relative;
+
+  width: 290px;
+  height: 198px;
+
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+
+  overflow: visible;
+
+  z-index: 1;
+
+  flex-shrink: 0;
+}
+
+.cardWrapper:hover {
+  z-index: 100;
+}
+
+
+/* =========================================
+   POSTER
+========================================= */
+
+.poster {
+  width: 227px;
+  height: 128px;
+
+  border-radius: 6px;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+}
+
+.poster:hover {
+  transform: scale(1.02);
+}
+
+
+/* =========================================
+   HOVER CARD
+========================================= */
+
+.hoverCard {
+  position: absolute;
+
+  top: -50px;
+  left: 50%;
+
+  transform: translateX(-50%) scale(0.95);
+
+  width: 320px;
+  min-height: 305px;
+  height: auto;
+
+  background: #111;
+
+  border-radius: 8px;
+
+  overflow: visible;
+
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.8);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+
+  will-change: transform, opacity;
+
+  backface-visibility: hidden;
+
+  pointer-events: none;
+
+  z-index: 999999;
+
+  box-sizing: border-box;
+}
+
+.cardWrapper:hover .hoverCard {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateX(-50%) scale(1);
+
+  pointer-events: auto;
+}
+
+.hoverCard:hover {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateX(-50%) scale(1);
+
+  pointer-events: auto;
+}
+
+
+/* =========================================
+   HOVER IMAGE
+========================================= */
+
+.hoverImage {
+  width: 100%;
+  height: 130px;
+
+  object-fit: cover;
+
+  border-radius: 8px 8px 0 0;
+
+  display: block;
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.badge {
+  background: red;
+
+  color: white;
+
+  font-size: 12px;
+
+  padding: 2px 8px;
+
+  border-radius: 4px;
+
+  display: inline-block;
+
+  margin: 10px 0 0 12px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   BUTTON ROW
+========================================= */
+
+.buttonRow {
+  display: flex;
+
+  gap: 8px;
+
+  margin: 12px;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+
+/* =========================================
+   CIRCLE BUTTON
+========================================= */
+
+.circleButton {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.circleButton:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   META INFORMATION
+========================================= */
+
+.metaRow {
+  color: white;
+
+  display: flex;
+
+  gap: 10px;
+
+  margin: 8px 12px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+
+/* =========================================
+   SMALL CIRCLE BUTTON
+========================================= */
+
+.circleButtonSmall {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: rgba(34, 34, 34, 0.8);
+
+  border: 1px solid #555;
+
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+
+  flex-shrink: 0;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.circleButtonSmall:hover {
+  background: #333;
+
+  border-color: #777;
+
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   DOT
+========================================= */
+
+.dot {
+  color: #888;
+
+  margin: 0 4px;
+}
+
+
+/* =========================================
+   GENRES
+========================================= */
+
+.genres {
+  color: #bbb;
+
+  font-size: 13px;
+
+  margin: 6px 12px 12px 12px;
+
+  line-height: 1.4;
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================
+   TAG
+========================================= */
+
+.tag {
+  color: #ddd;
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+   1200px+
+========================================= */
+
+@media (min-width: 1200px) {
+  .cardWrapper {
+    width: 290px;
+    height: 198px;
+  }
+
+  .poster {
+    width: 227px;
+    height: 128px;
+  }
+
+  .hoverCard {
+    width: 320px;
+    min-height: 305px;
+  }
+}
+
+
+/* =========================================
+   LAPTOP
+   1024px - 1199px
+========================================= */
+
+@media (max-width: 1199px) {
+  .cardWrapper {
+    width: 250px;
+    height: 180px;
+  }
+
+  .poster {
+    width: 210px;
+    height: 120px;
+  }
+
+  .hoverCard {
+    width: 300px;
+    min-height: 290px;
+  }
+
+  .hoverImage {
+    height: 120px;
+  }
+
+  .metaRow {
+    font-size: 13px;
+  }
+
+  .genres {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+   769px - 1024px
+========================================= */
+
+@media (max-width: 1024px) {
+  .cardWrapper {
+    width: 225px;
+    height: 170px;
+  }
+
+  .poster {
+    width: 200px;
+    height: 112px;
+
+    border-radius: 5px;
+  }
+
+  .hoverCard {
+    width: 280px;
+
+    min-height: 275px;
+
+    top: -40px;
+  }
+
+  .hoverImage {
+    height: 115px;
+  }
+
+  .badge {
+    font-size: 11px;
+
+    margin: 8px 0 0 10px;
+  }
+
+  .buttonRow {
+    margin: 10px;
+
+    gap: 6px;
+  }
+
+  .metaRow {
+    margin: 7px 10px;
+
+    font-size: 12px;
+
+    gap: 7px;
+  }
+
+  .genres {
+    font-size: 11px;
+
+    margin: 5px 10px 10px 10px;
+  }
+
+  .circleButtonSmall {
+    width: 28px;
+    height: 28px;
+
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   481px - 768px
+========================================= */
+
+@media (max-width: 768px) {
+  .cardWrapper {
+    width: 190px;
+    height: 145px;
+  }
+
+  .poster {
+    width: 175px;
+    height: 100px;
+
+    border-radius: 5px;
+  }
+
+  /*
+    Smaller hover card for tablets and mobile
+  */
+
+  .hoverCard {
+    width: 250px;
+
+    min-height: 250px;
+
+    top: -35px;
+
+    border-radius: 6px;
+  }
+
+  .hoverImage {
+    height: 105px;
+
+    border-radius: 6px 6px 0 0;
+  }
+
+  .badge {
+    font-size: 10px;
+
+    padding: 2px 6px;
+
+    margin: 7px 0 0 9px;
+  }
+
+  .buttonRow {
+    margin: 8px 9px;
+
+    gap: 5px;
+  }
+
+  .metaRow {
+    margin: 6px 9px;
+
+    font-size: 11px;
+
+    gap: 6px;
+  }
+
+  .genres {
+    font-size: 10px;
+
+    margin: 5px 9px 9px 9px;
+
+    line-height: 1.35;
+  }
+
+  .circleButtonSmall {
+    width: 26px;
+    height: 26px;
+
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   480px and below
+========================================= */
+
+@media (max-width: 480px) {
+  .cardWrapper {
+    width: 155px;
+    height: 125px;
+  }
+
+  .poster {
+    width: 145px;
+    height: 82px;
+
+    border-radius: 4px;
+  }
+
+  /*
+    Hover card remains usable on small screens
+  */
+
+  .hoverCard {
+    width: 220px;
+
+    min-height: 225px;
+
+    top: -30px;
+
+    border-radius: 6px;
+  }
+
+  .hoverImage {
+    height: 90px;
+
+    border-radius: 6px 6px 0 0;
+  }
+
+  .badge {
+    font-size: 9px;
+
+    padding: 2px 5px;
+
+    margin: 6px 0 0 8px;
+  }
+
+  .buttonRow {
+    margin: 7px 8px;
+
+    gap: 4px;
+  }
+
+  .metaRow {
+    margin: 5px 8px;
+
+    font-size: 10px;
+
+    gap: 5px;
+  }
+
+  .genres {
+    font-size: 9px;
+
+    margin: 4px 8px 8px 8px;
+
+    line-height: 1.3;
+  }
+
+  .circleButtonSmall {
+    width: 24px;
+    height: 24px;
+
+    font-size: 12px;
+  }
+
+  .dot {
+    margin: 0 2px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+   360px and below
+========================================= */
+
+@media (max-width: 360px) {
+  .cardWrapper {
+    width: 135px;
+    height: 110px;
+  }
+
+  .poster {
+    width: 128px;
+    height: 72px;
+
+    border-radius: 4px;
+  }
+
+  .hoverCard {
+    width: 200px;
+
+    min-height: 210px;
+
+    top: -25px;
+  }
+
+  .hoverImage {
+    height: 80px;
+  }
+
+  .badge {
+    font-size: 8px;
+
+    margin: 5px 0 0 7px;
+  }
+
+  .buttonRow {
+    margin: 6px 7px;
+
+    gap: 3px;
+  }
+
+  .metaRow {
+    margin: 4px 7px;
+
+    font-size: 9px;
+
+    gap: 4px;
+  }
+
+  .genres {
+    font-size: 8px;
+
+    margin: 4px 7px 7px 7px;
+  }
+
+  .circleButtonSmall {
+    width: 22px;
+    height: 22px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   TOUCH DEVICES
+========================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  /*
+    Disable the large hover popup on touch devices.
+    This prevents the popup from getting stuck after
+    tapping a movie card.
+  */
+
+  .hoverCard {
+    display: none;
+  }
+
+  .cardWrapper:hover .hoverCard {
+    display: none;
+  }
+
+  .poster:hover {
+    transform: none;
+  }
+
+  .circleButton:hover {
+    transform: none;
+  }
+
+  .circleButtonSmall:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .cardWrapper,
+  .poster,
+  .hoverCard,
+  .circleButton,
+  .circleButtonSmall {
+    transition: none;
+  }
 }

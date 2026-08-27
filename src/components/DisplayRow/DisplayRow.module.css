@@ -1,3 +1,55 @@
+
+@media (min-width: 1200px) {
+  .mainWrapper {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+
+/* =========================================
+   LAPTOP
+
+@media (max-width: 1199px) {
+  .mainWrapper {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+
+/* =========================================
+   TABLET
+
+@media (max-width: 768px) {
+  .mainWrapper {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+
+@media (max-width: 480px) {
+  .mainWrapper {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+
+@media (max-width: 360px) {
+  .mainWrapper {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
 .mainWrapper {
   padding-left: 2%;
   background-color: black;
