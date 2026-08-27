@@ -29,7 +29,15 @@
   gap: 40px;
 }
 
-/* ..............work here................... */
+
+.logo {
+  flex-shrink: 0;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 
 .logo:hover {
   opacity: 0.8;
