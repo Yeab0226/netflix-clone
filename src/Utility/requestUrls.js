@@ -2,7 +2,7 @@
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
 const requests = {
-  // Add category endpoints here.
+  fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`
 };
 
 export default requests;
