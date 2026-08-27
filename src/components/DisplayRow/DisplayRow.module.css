@@ -1,17 +1,3 @@
-/* T-12: Display row styles */
-
-.mainWrapper {
-  padding-left: 2%;
-  padding-right: 2%;
-  background-color: black;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-
-/* =========================================
-   LARGE DESKTOP
-========================================= */
 
 @media (min-width: 1200px) {
   .mainWrapper {
@@ -23,7 +9,6 @@
 
 /* =========================================
    LAPTOP
-========================================= */
 
 @media (max-width: 1199px) {
   .mainWrapper {
@@ -35,7 +20,6 @@
 
 /* =========================================
    TABLET
-========================================= */
 
 @media (max-width: 768px) {
   .mainWrapper {
@@ -47,7 +31,6 @@
 
 /* =========================================
    MOBILE
-========================================= */
 
 @media (max-width: 480px) {
   .mainWrapper {
@@ -59,7 +42,6 @@
 
 /* =========================================
    SMALL MOBILE
-========================================= */
 
 @media (max-width: 360px) {
   .mainWrapper {
@@ -68,3 +50,7 @@
   }
 }
 
+.mainWrapper {
+  padding-left: 2%;
+  background-color: black;
+}

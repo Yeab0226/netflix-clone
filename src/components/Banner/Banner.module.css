@@ -3,34 +3,26 @@
  
 .banner {
   color: white;
-  /* background-image: url("../../assets/image/banner.jpeg"); */
+ 
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 600px;
-  position: relative;
 }
 
 .contents {
   padding-left: 15px;
   padding-top: 330px;
-  padding-bottom: 40px;
-  max-width: 800px;
 }
 
 .logoImg {
   width: 150px;
-  max-width: 100%;
-  height: auto;
 }
 
 .title {
   font-size: 3rem;
   font-weight: 800;
-  padding-bottom: 0.3rem;
-  margin: 0;
-  line-height: 1.1;
+  padding-bottom: 0.3ren;
 }
 
 .description {
@@ -38,15 +30,13 @@
   line-height: 1.3;
   padding-top: 0.5rem;
   max-width: 740px;
-  margin: 0 0 20px 0;
+  height: 80px;
 }
 
 .buttonContainer {
   display: flex;
-  align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
-  flex-wrap: wrap;
 }
 
 .button {
@@ -60,22 +50,21 @@
   border: none;
   font-weight: 700;
   border-radius: 0.2vw;
-  padding: 0.6rem 2rem;
-  margin-right: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   background-color: white;
-  font-size: 1rem;
-  transition: all 0.2s ease;
 }
 
 .button:hover {
   color: white;
-  background-color: rgba(51, 51, 51, 0.7);
+  background-color: rgba(51, 51, 51, 0.5);
+  transition: all 0.2s;
 }
 
 .fadeButtom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   height: 11rem;
   background-image: linear-gradient(
     180deg,
@@ -84,13 +73,6 @@
     #111
   );
   width: 100%;
-  pointer-events: none;
-}
-
-
-/* =========================================
-   LARGE DESKTOP
-========================================= */
 
 @media (min-width: 1200px) {
   .banner {
@@ -115,7 +97,6 @@
 
 /* =========================================
    LAPTOP / DESKTOP
-========================================= */
 
 @media (max-width: 1199px) {
   .banner {
@@ -140,7 +121,6 @@
 
 /* =========================================
    TABLET
-========================================= */
 
 @media (max-width: 768px) {
   .banner {
@@ -188,7 +168,6 @@
 
 /* =========================================
    MOBILE
-========================================= */
 
 @media (max-width: 480px) {
   .banner {
@@ -240,7 +219,6 @@
 
 /* =========================================
    SMALL MOBILE
-========================================= */
 
 @media (max-width: 360px) {
   .banner {
@@ -275,3 +253,6 @@
     height: 6rem;
   }
 }
+}
+
+
