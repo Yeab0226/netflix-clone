@@ -77,7 +77,8 @@ function Header() {
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className={Styles.searchButton}
             >
-              <Search size={20} />
+              {/* ...........work here......... */}
+              
             </button>
 
             {isSearchOpen && (
@@ -108,8 +109,9 @@ function Header() {
 
             {isProfileOpen && (
               <div className={Styles.profileMenu}>
-                <Link className={Styles.profileMenuItem}>Account</Link>
-                <Link className={Styles.profileMenuItem}>Help Center</Link>
+
+                {/* ...........work here......... */}
+
                 <hr className={Styles.profileMenuDivider} />
                 <button className={Styles.profileMenuItem}>Sign Out</button>
               </div>
