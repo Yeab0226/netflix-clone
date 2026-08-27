@@ -27,6 +27,19 @@ function Header() {
           <Bell size={20} />
           <span className={Styles.notificationBadge}>4</span>
         </button>
+        {/* profile icon  */}
+
+        <div className={Styles.profileContainer}>
+          <button
+            onClick={() => setIsProfileOpen(!isProfileOpen)}
+            className={Styles.profileButton}
+          >
+            <div className={Styles.profileAvatar}>
+              <User size={20} />
+            </div>
+            <ChevronDown size={20} />
+          </button>
+        </div>
       </div>
     </header>
   );
