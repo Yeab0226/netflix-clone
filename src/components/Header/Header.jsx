@@ -39,8 +39,17 @@ function Header() {
             </div>
             <ChevronDown size={20} />
           </button>
+          
+           {isProfileOpen && (
+              <div className={Styles.profileMenu}>
+                <Link className={Styles.profileMenuItem}>Account</Link>
+                <Link className={Styles.profileMenuItem}>Help Center</Link>
+                <hr className={Styles.profileMenuDivider} />
+                <button className={Styles.profileMenuItem}>Sign Out</button>
+              </div>
+            )}
+          </div>
         </div>
-      </div>
     </header>
   );
 }
